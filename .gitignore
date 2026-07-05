@@ -1,0 +1,6 @@
+*.asv
+*.autosave
+*.bak
+*.tmp
+*.log
+slprj/
