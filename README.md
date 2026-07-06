@@ -1,6 +1,6 @@
-# 基于 MTPA 的 PMSM 双闭环调速系统课程设计
+# 基于 MTPA 的 PMSM 双闭环调速系统课程设计 / Course Design for PMSM Double-Closed-Loop Speed Control Based on MTPA
 
-本仓库公开保存本次课程设计的最终交付物，包括可运行的 Simulink 模型、`scenario.mat`、MTPA 查表文件、按工况导出的 `.mat` 数据、中文课程报告、报告图片和答辩 PPT。
+本仓库公开保存本次课程设计的最终交付物，包括可运行的 Simulink 模型、`scenario.mat`、MTPA 查表文件、按工况导出的 `.mat` 数据、中文课程报告、工况结果图片和答辩 PPT。
 
 ## 目录说明
 
@@ -13,7 +13,7 @@
   - `工具/generate_pmsm_support_files.m`：早期支持脚本，保留作参考
   - `工况数据/`：`case1` 到 `case5` 的 `.mat` 数据，以及 `taskbook_metrics.csv/.mat`
 - `课程报告/`
-  - `PMSM_MTPA_课程设计报告.docx`：中文课程设计报告
+  - `课程设计报告_PMSM_MTPA.docx`：中文在前、英文在后的课程设计报告
   - `图片/`：报告中引用的关键模型图和仿真波形
 - `答辩PPT/`
   - `永磁电机MTPA控制.pptx`：最终答辩 PPT
@@ -46,6 +46,42 @@
 - `工况3`：90% 上升时间约 `0.093 s`，超调约 `4.47 r/min`
 - `工况4`：负载 `2 -> 10 N·m` 时，稳态转速约 `1499.57 r/min`，稳态转矩约 `10.00 N·m`
 - `工况5`：在相同 `8 N·m` 转矩需求下，`lookup` 模式稳态电流幅值约 `21.88 A`，略低于 `id=0` 模式的 `21.97 A`
+
+## 工况结果图片
+
+### 工况1 空载启动
+
+![工况1](课程报告/图片/case1_no_load_waveforms.png)
+
+### 工况2 带载启动
+
+![工况2](课程报告/图片/case2_loaded_waveforms.png)
+
+### 工况3 转速阶跃
+
+![工况3](课程报告/图片/case3_speed_step_waveforms.png)
+
+### 工况4 负载突加
+
+![工况4](课程报告/图片/case4_load_step_waveforms.png)
+
+### 工况5 lookup 对比
+
+![工况5-lookup](课程报告/图片/case5_lookup_waveforms.png)
+
+### 工况5 lookup 与 id=0 对比
+
+![工况5-compare](课程报告/图片/case5_lookup_vs_id0_compare.png)
+
+## 模型示意图
+
+### 顶层模型
+
+![顶层模型](课程报告/图片/00_top_level.png)
+
+### MTPA 电流给定模块
+
+![MTPA模块](课程报告/图片/02_mtpa_formula.png)
 
 ## 说明
 
